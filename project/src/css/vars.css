@@ -1,0 +1,10 @@
+:root {
+  --dark-orange: #ff684f;
+  --light-orange: #ff806c;
+  --pompadour: #602041;
+  --apricot: #feffea;
+
+  --bg-gradient {
+    background: linear-gradient(to left, var(--dark-orange), var(--light-orange), var(--dark-orange));
+  }
+}

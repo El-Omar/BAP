@@ -1,0 +1,21 @@
+@font-face {
+  font-family: pacifico;
+  src: url(pacifico/Pacifico.ttf);
+}
+
+@font-face {
+  font-family: bloc;
+  src: url('bloc/Bloc_W01_Regular.ttf');
+}
+
+@font-face {
+  font-family: calibri;
+  src: url(calibri/Calibri.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: calibri;
+  src: url(calibri/CALIBRIB.ttf);
+  font-weight: bold;
+}
