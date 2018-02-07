@@ -99,6 +99,7 @@ body {
     font-size: 4rem;
     color: #582b42;
     margin-bottom: 2rem;
+    text-shadow: .25rem 0 #2da569;
   }
 }
 
@@ -112,7 +113,7 @@ body {
 
 .right-side {
   order: 2;
-  margin-right: 15rem;
+  margin-right: 5rem;
   display: flex;
   flex-flow: column;
   width: 36%;
@@ -120,14 +121,15 @@ body {
   & p {
     font-size: 2.2rem;
     font-family: calibri;
+    font-weight: lighter;
     color: #582b42;
     line-height: 3rem;
-
-    & .marked-text {
-      color: var(--apricot);
-      font-weight: bold;
-    }
   }
+}
+
+.marked-text {
+  color: var(--apricot);
+  font-weight: bold;
 }
 
 .step4 {
