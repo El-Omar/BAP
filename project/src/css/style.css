@@ -35,6 +35,7 @@
 
 body {
   font-size: 1.6rem;
+  font-family: calibri;
   overflow-x: hidden;
   /* overflow-y: hidden; */
 }
@@ -46,12 +47,6 @@ body {
   /* align-items: center; */
 }
 
-.aging {
-  height: 100vh;
-  border: 5px solid yellow;
-  width: 100%;
-}
-
 /*--------------IVF SECTION------------------------*/
 
 .ivf {
@@ -61,7 +56,6 @@ body {
   height: auto;
   margin: 0;
   position: relative;
-  border: 5px solid red;
   background: url(../assets/img/pattern5.png) repeat, linear-gradient(to right, color(#42bf82 a(100%)), color(var(--emerald) a(100%)), color(#42bf82 a(100%)));
 
   &-content {
@@ -260,8 +254,6 @@ body {
 }
 
 .intro {
-  /* @apply --bg-gradient; */
-  border: 1px solid green;
   /* z-index: 2; */
   height: 100vh;
   width: 100%;
@@ -287,7 +279,6 @@ body {
 .woman {
   position: absolute;
   left: 2.7rem;
-  /* border: 1px solid red; */
   z-index: 5;
 
   &-wrap {
@@ -474,6 +465,74 @@ body {
 
 .fertility {
   position: relative;
+  height: 90vh;
+  padding: 3rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: var(--alabaster);
+  }
+
+  &-title {
+    padding: 3rem;
+    display: flex;
+    align-items: flex-end;
+
+    &-first {
+      @apply --watermelon-gradient;
+      font-size: 6rem;
+      font-family: bloc;
+      color: white;
+      padding: 0 2rem;
+      margin-right: 1rem;
+      display: inline-block;
+    }
+
+    &-baby {
+      font-family: pacifico;
+      font-size: 10rem;
+    }
+  }
+
+  &-desc {
+    width: 58rem;
+    font-size: 2.2rem;
+    margin: 4rem;
+  }
+
+  &-img {
+    margin-bottom: -5rem;
+
+    &-wrap {
+      margin-left: 5rem;
+      position: absolute;
+      left: 3rem;
+      bottom: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.pre-wheel {
+  position: absolute;
+  right: 21rem;
+  top: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1.3rem;
+    height: 10rem;
+    background: var(--revolver);
+    left: calc(50% - .6rem);
+    top: 13rem;
+  }
 }
 
 .wheel {
@@ -496,7 +555,7 @@ body {
     border-radius: 50%;
     position: absolute;
     right: 16rem;
-    top: 2rem;
+    top: calc(50% - 17rem);
 
     &-bg {
       position: absolute;
@@ -564,6 +623,185 @@ body {
       padding-right: 2rem;
       padding-bottom: 2rem;
     }
+  }
+}
+
+.aging {
+  width: 100%;
+  padding: 5rem 3rem;
+  position: relative;
+
+  &-title {
+    width: 30rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &-age {
+      font-family: bloc;
+      color: var(--watermelon);
+      font-size: 8rem;
+    }
+
+    &-vs {
+      font-family: bloc;
+      color: var(--vulcan);
+      font-size: 8rem;
+    }
+
+    &-ovum {
+      font-family: pacifico;
+      color: var(--pompadour);
+      font-size: 8rem;
+      margin-top: -2rem;
+    }
+  }
+
+  &-pipe {
+    @apply --watermelon-gradient;
+    height: 100%;
+    width: 30rem;
+    position: absolute;
+    right: 17rem;
+    top: 0;
+  }
+}
+
+.aging-art {
+  margin: 5rem 3rem;
+
+  &-title {
+    font-family: bloc;
+    color: var(--watermelon);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &-desc {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--pompadour);
+    width: 50rem;
+
+    &-keyword {
+      color: var(--watermelon);
+      font-weight: bold;
+    }
+  }
+}
+
+.freeze {
+  height: 90vh;
+  padding: 5rem 3rem;
+
+  &-title {
+    font-family: bloc;
+    color: var(--vulcan);
+    font-size: 8rem;
+  }
+}
+
+.freeze-art {
+  margin: 3rem 1rem;
+
+  &-title {
+    font-family: bloc;
+    color: var(--watermelon);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  &-desc {
+    font-size: 2rem;
+    width: 50rem;
+    margin-bottom: 2rem;
+    line-height: 2.3rem;
+
+    &-keyword {
+      color: var(--emerald);
+      font-weight: bold;
+    }
+  }
+}
+
+.outro {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -2;
+  position: relative;
+
+  &::before {
+    @apply --gradient-dark;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+}
+
+.ending {
+  @apply --bg-gradient;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  &-header {
+    margin-top: -5%;
+    margin-bottom: 2%;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  &-title {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+
+  &-are {
+    font-family: pacifico;
+    font-size: 11.5rem;
+    color: var(--pompadour);
+    text-shadow: .4rem 0 var(--shadow);
+    margin-bottom: .3rem;
+    margin-left: -.7rem;
+  }
+
+  &-youan {
+    font-family: calibri;
+    font-weight: bold;
+    font-size: 6.4rem;
+    color: var(--apricot);
+    text-shadow: .3rem 0 var(--shadow);
+    margin-left: -.5rem;
+  }
+
+  &-educated {
+    font-family: bloc;
+    font-size: 9rem;
+    color: var(--pompadour);
+    text-shadow: .2rem 0 var(--shadow);
+    margin-top: -.5rem;
+  }
+
+  &-baby {
+    font-family: bloc;
+    font-size: 16rem;
+    color: var(--apricot);
+    text-shadow: .8rem 0 var(--shadow);
+    margin-top: -1.5rem;
+    margin-right: -1.3rem;
   }
 }
 

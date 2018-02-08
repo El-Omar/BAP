@@ -9,11 +9,7 @@ const init = () => {
 const create = () => {
   $chapters = document.querySelectorAll(`.chapter`);
   $chapters.forEach(c => {
-    screens().get(c.dataset.name)();
-  });
-
-  window.addEventListener(`scroll`, () => {
-    screens().get(`ivf`)();
+    screens().get(c.dataset.name)(c);
   });
 
   // const wheelparts = document.querySelectorAll(`.wheel-part`);

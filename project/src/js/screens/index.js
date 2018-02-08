@@ -1,5 +1,6 @@
 import welcome from './sections/welcome';
 import intro from './sections/intro';
+import pipe from './sections/pipe';
 import fertility from './sections/fertility';
 import aging from './sections/aging';
 import ivf from './sections/ivf';
@@ -13,6 +14,7 @@ export default () => {
 
   sections.set(`welcome`, welcome);
   sections.set(`intro`, intro);
+  sections.set(`pipe`, pipe);
   sections.set(`fertility`, fertility);
   sections.set(`aging`, aging);
   sections.set(`ivf`, ivf);

@@ -3,10 +3,10 @@
 const wheelparts = document.querySelectorAll(`.wheel-part`);
 let pos = ``;
 let angle = 0;
-// let resAngle = 0;
 let currAngle = 0;
 
-export default () => {
+export default section => {
+  console.log(`section:`, section);
   wheelparts.forEach(p => p.addEventListener(`click`, wheelClicked));
   draw();
 };
