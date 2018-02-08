@@ -489,7 +489,7 @@ body {
       font-size: 6rem;
       font-family: bloc;
       color: white;
-      padding: 0 2rem;
+      padding: .5rem 2rem;
       margin-right: 1rem;
       display: inline-block;
     }
@@ -497,6 +497,8 @@ body {
     &-baby {
       font-family: pacifico;
       font-size: 10rem;
+      text-shadow: .8rem 0 #e6e6e6;
+      color: var(--pompadour);
     }
   }
 
@@ -631,6 +633,8 @@ body {
   padding: 15rem 3rem;
   position: relative;
 
+  background: url(../assets/img/pattern5.png) repeat, linear-gradient(to right, color(white a(100%)), color(white a(90%)), color(white a(100%)));
+
   &-title {
     width: 30rem;
     display: flex;
@@ -650,6 +654,7 @@ body {
       font-family: bloc;
       color: var(--vulcan);
       font-size: 8rem;
+      margin-left: 6rem;
       text-shadow: .8rem 0 #e6e6e6;
     }
 
@@ -684,7 +689,7 @@ body {
 }
 
 .aging-art {
-  margin: 0 0 15rem 3rem;
+  margin: 0 0 15rem 8rem;
 
   &-title {
     font-family: bloc;
