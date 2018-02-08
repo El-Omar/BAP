@@ -465,7 +465,7 @@ body {
 
 .fertility {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   padding: 3rem;
 
   &::before {
@@ -628,7 +628,7 @@ body {
 
 .aging {
   width: 100%;
-  padding: 5rem 3rem;
+  padding: 15rem 3rem;
   position: relative;
 
   &-title {
@@ -636,17 +636,21 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 5rem;
+    margin-left: 10rem;
 
     &-age {
       font-family: bloc;
       color: var(--watermelon);
-      font-size: 8rem;
+      font-size: 10rem;
+      text-shadow: .8rem 0 #e6e6e6;
     }
 
     &-vs {
       font-family: bloc;
       color: var(--vulcan);
       font-size: 8rem;
+      text-shadow: .8rem 0 #e6e6e6;
     }
 
     &-ovum {
@@ -654,27 +658,43 @@ body {
       color: var(--pompadour);
       font-size: 8rem;
       margin-top: -2rem;
+      text-shadow: .8rem 0 #e6e6e6;
     }
   }
 
   &-pipe {
-    @apply --watermelon-gradient;
+    /*@apply --watermelon-gradient;*/
     height: 100%;
-    width: 30rem;
+    width: 35rem;
     position: absolute;
     right: 17rem;
     top: 0;
   }
+
+  &-pipeUp {
+    background: url(../assets/img/2x/pipe_2@2x.png) no-repeat;
+    height: 157rem;
+    width: 44rem;
+    position: absolute;
+    right: 11rem;
+    top: -17.9rem;
+    z-index: 5;
+  }
+
 }
 
 .aging-art {
-  margin: 5rem 3rem;
+  margin: 0 0 15rem 3rem;
 
   &-title {
     font-family: bloc;
     color: var(--watermelon);
     font-size: 3rem;
     margin-bottom: 1rem;
+  }
+
+  &-markedBruin {
+    color: var(--pompadour);
   }
 
   &-desc {
