@@ -6,8 +6,17 @@ const init = () => {
   // window.location.replace(`index.html#start`);
   // window.location.reload();
   console.log(`window.location:`, window.location);
+  preload();
   create();
-  draw();
+};
+
+const preload = () => {
+  const loadDiv = document.querySelector(`.loadDiv`);
+
+  window.addEventListener(`load`, () => {
+    console.log(`page loaded??`);
+    loadDiv.classList.add(`hidden`);
+  });
 };
 
 const create = () => {
@@ -19,10 +28,7 @@ const create = () => {
   const start = document.querySelector(`.start-wrap`);
   const {x, y} = start.getBoundingClientRect();
   window.scrollTo(x, y);
-};
 
-const draw = () => {
-  requestAnimationFrame(draw);
 };
 
 init();

@@ -25,7 +25,7 @@ const btnClicked = e => {
 };
 
 const goFurtherHandler = e => {
-  console.log(`WHEN PRESSED ON VERDER`);
+  $video.srcObject.getTracks()[0].stop();
   e.preventDefault();
   const btnUploadPhoto = document.querySelector(`.photo-upload`);
   const btnTakePhoto = document.querySelector(`.photo-take`);
