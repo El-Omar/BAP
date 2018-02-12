@@ -2,6 +2,10 @@ import screens from './screens/index';
 let $chapters;
 
 const init = () => {
+  // window.location.href = `#start`;
+  // window.location.replace(`index.html#start`);
+  // window.location.reload();
+  console.log(`window.location:`, window.location);
   create();
   draw();
 };
@@ -12,13 +16,10 @@ const create = () => {
     screens().get(c.dataset.name)(c);
   });
 
-  // const wheelparts = document.querySelectorAll(`.wheel-part`);
-  // wheelparts.forEach(p => p.addEventListener(`click`, wheelClicked));
+  const start = document.querySelector(`.start-wrap`);
+  const {x, y} = start.getBoundingClientRect();
+  window.scrollTo(x, y);
 };
-
-// const wheelClicked = ({currentTarget: tar}) => {
-//   console.log(`tar:`, tar);
-// };
 
 const draw = () => {
   requestAnimationFrame(draw);

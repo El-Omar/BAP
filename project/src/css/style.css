@@ -52,21 +52,12 @@ body {
   font-size: 1.6rem;
   font-family: calibri;
   overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-.container {
-  /* display: flex; */
-  /* flex-flow: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  /* overflow-y: hidden; */
 }
 
 /*--------------IVF SECTION------------------------*/
 
 .ivf {
-  /* transform: rotate(20deg); */
-  /* transform-origin: top right; */
   width: 100%;
   height: auto;
   margin: 0;
@@ -350,7 +341,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
   position: relative;
 
   &::before {
@@ -390,9 +380,8 @@ body {
 .pipe {
   clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   width: 100%;
-  height: 125vh;
-  margin-top: -20rem;
-  /* padding-bottom: 20rem; */
+  height: 150vh;
+  margin-top: -15%;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -404,26 +393,14 @@ body {
     @apply --gradient-dark;
     content: '';
     position: absolute;
-    /* bottom: -20rem; */
     width: 100%;
     height: 100%;
-    /* margin-bottom: -10rem; */
     bottom: 0;
     z-index: -1;
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    width: 253px;
-    height: 64px;
-    bottom: -5px;
-    right: 20rem;
-    background: url(../assets/img/pipe/eicell-pipe.png) no-repeat;
-  }
-
   &-main {
-    height: 73%;
+    height: 60%;
     margin-top: -15%;
 
     &-img {
@@ -435,6 +412,7 @@ body {
   &-sub {
     position: relative;
     width: 100%;
+    height: 40%;
     margin: -3%;
     z-index: -1;
     display: flex;
@@ -444,22 +422,10 @@ body {
       width: 20rem;
       display: flex;
       flex-flow: column;
-      justify-content: space-between;
     }
 
     &-left {
       align-items: flex-start;
-
-      &::after {
-        content: '';
-        position: absolute;
-        width: calc(50% - 20rem);
-        height: 12px;
-        background: var(--vulcan-img);
-        opacity: .9;
-        left: 0;
-        bottom: 0;
-      }
 
       &::before {
         content: '';
@@ -468,7 +434,8 @@ body {
         height: 49px;
         background: url(../assets/img/pipe/zaad-box.png) no-repeat 100% 100%;
         left: 0;
-        bottom: -20px;
+        /* bottom: 30%; */
+        top: 27rem;
         z-index: 1;
       }
     }
@@ -483,8 +450,8 @@ body {
         height: 12px;
         background: var(--vulcan-img);
         opacity: .9;
-        right: 35.3rem;
-        bottom: 0;
+        right: 35rem;
+        top: 29rem;
       }
 
       &::before {
@@ -493,11 +460,31 @@ body {
         width: 2.3rem;
         height: 3.8rem;
         background: url(../assets/img/pipe/pipe-90-degrees.png) no-repeat;
+        top: 29rem;
         right: 33rem;
-        bottom: -26px;
         z-index: 1;
         transform: rotateX(180deg);
       }
+
+      &-down {
+        width: 12px;
+        height: 100%;
+        background: var(--vulcan-img);
+        opacity: .9;
+        position: absolute;
+        right: 33.1rem;
+        top: 32rem;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 253px;
+      height: 64px;
+      bottom: -10%;
+      right: 20rem;
+      background: url(../assets/img/pipe/eicell-pipe.png) no-repeat;
     }
   }
 
@@ -506,6 +493,17 @@ body {
     &-left {
       margin-top: -1rem;
       z-index: -1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: calc(50vw - 20rem);
+        height: 12px;
+        background: var(--vulcan-img);
+        opacity: .9;
+        left: 0;
+        top: 29.3rem;
+      }
     }
 
     &-right {
@@ -544,7 +542,6 @@ body {
     &-right {
       transform: rotateY(180deg);
       margin-left: 5rem;
-      border: 2px solid red;
     }
 
     &-left {
@@ -561,6 +558,7 @@ body {
   position: relative;
   height: 100vh;
   padding: 3rem;
+  margin-top: -10rem;
 
   &::before {
     content: '';

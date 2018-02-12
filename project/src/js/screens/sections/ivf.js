@@ -1,6 +1,6 @@
 const steps = document.querySelectorAll(`.step`);
-let lastYPos = 0;
-let direction = ``;
+// let lastYPos = 0;
+// let direction = ``;
 
 export default () => {
   window.addEventListener(`scroll`, onScroll);
@@ -8,15 +8,15 @@ export default () => {
 
 const onScroll = () => {
 
-  const winY = window.scrollY;
+  // const winY = window.scrollY;
+  //
+  // if (winY > lastYPos) {
+  //   direction = `forward`;
+  // } else {
+  //   direction = `backward`;
+  // }
 
-  if (winY > lastYPos) {
-    direction = `forward`;
-  } else {
-    direction = `backward`;
-  }
-
-  console.log(`direction:`, direction);
+  // console.log(`direction:`, direction);
 
   steps.forEach(step => {
     const yStep = step.getBoundingClientRect().y;
@@ -29,5 +29,5 @@ const onScroll = () => {
     }
   });
 
-  lastYPos = winY;
+  // lastYPos = winY;
 };

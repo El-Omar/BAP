@@ -4,9 +4,13 @@ const wheelparts = document.querySelectorAll(`.wheel-part`);
 let pos = ``;
 let angle = 0;
 let currAngle = 0;
+let section = undefined;
+let HEIGHT;
 
-export default section => {
-  console.log(`section:`, section);
+export default s => {
+  section = s;
+  HEIGHT = window.innerHeight;
+  console.log(`HEIGHT:`, HEIGHT);
   wheelparts.forEach(p => p.addEventListener(`click`, wheelClicked));
   draw();
 };
@@ -19,6 +23,12 @@ const wheelClicked = ({currentTarget: tar}) => {
 };
 
 const draw = () => {
+
+  const {y} = section.getBoundingClientRect();
+
+  if (y < HEIGHT * .2) {
+    console.log(`k`);
+  }
 
   if (pos === `right-top`) {
     angle = 360;

@@ -55,8 +55,6 @@ const goFurtherHandler = e => {
 
   babyWrap.style.position = `initial`;
 
-  // velocity(babyWrap, {width: `35rem`, height: `19rem`}, {duration: 700, easing: [300, 20]});
-
   velocity(babyContainer, {top: `40%`, scale: 1, translateY: `0%`}, {duration: 1300, easing: [300, 20],
     complete: () => {
       babyContainer.style.position = `fixed`;
@@ -74,6 +72,8 @@ const takePhotoHandler = e => {
   navigator.mediaDevices.getUserMedia({
     video: true
   }).then(stream => $video.srcObject = stream);
+
+  console.log(`$video.srcObject:`, $video.srcObject);
 
   const takeFrame = document.querySelector(`.photo-take-btn`);
   velocity(takeFrame, {opacity: 1}, {duration: 400, easing: [300, 20]});
