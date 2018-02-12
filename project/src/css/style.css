@@ -559,7 +559,7 @@ body {
 
 .fertility {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   padding: 3rem;
 
   &::before {
@@ -583,7 +583,7 @@ body {
       font-size: 6rem;
       font-family: bloc;
       color: white;
-      padding: 0 2rem;
+      padding: .5rem 2rem;
       margin-right: 1rem;
       display: inline-block;
     }
@@ -591,6 +591,8 @@ body {
     &-baby {
       font-family: pacifico;
       font-size: 10rem;
+      text-shadow: .8rem 0 #e6e6e6;
+      color: var(--pompadour);
     }
   }
 
@@ -722,25 +724,32 @@ body {
 
 .aging {
   width: 100%;
-  padding: 5rem 3rem;
+  padding: 15rem 3rem;
   position: relative;
+
+  background: url(../assets/img/pattern5.png) repeat, linear-gradient(to right, color(white a(100%)), color(white a(90%)), color(white a(100%)));
 
   &-title {
     width: 30rem;
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin-bottom: 5rem;
+    margin-left: 10rem;
 
     &-age {
       font-family: bloc;
       color: var(--watermelon);
-      font-size: 8rem;
+      font-size: 10rem;
+      text-shadow: .8rem 0 #e6e6e6;
     }
 
     &-vs {
       font-family: bloc;
       color: var(--vulcan);
       font-size: 8rem;
+      margin-left: 6rem;
+      text-shadow: .8rem 0 #e6e6e6;
     }
 
     &-ovum {
@@ -748,27 +757,43 @@ body {
       color: var(--pompadour);
       font-size: 8rem;
       margin-top: -2rem;
+      text-shadow: .8rem 0 #e6e6e6;
     }
   }
 
   &-pipe {
-    @apply --watermelon-gradient;
+    /*@apply --watermelon-gradient;*/
     height: 100%;
-    width: 30rem;
+    width: 35rem;
     position: absolute;
     right: 17rem;
     top: 0;
   }
+
+  &-pipeUp {
+    background: url(../assets/img/2x/pipe_2@2x.png) no-repeat;
+    height: 157rem;
+    width: 44rem;
+    position: absolute;
+    right: 11rem;
+    top: -17.9rem;
+    z-index: 5;
+  }
+
 }
 
 .aging-art {
-  margin: 5rem 3rem;
+  margin: 0 0 15rem 8rem;
 
   &-title {
     font-family: bloc;
     color: var(--watermelon);
     font-size: 3rem;
     margin-bottom: 1rem;
+  }
+
+  &-markedBruin {
+    color: var(--pompadour);
   }
 
   &-desc {
