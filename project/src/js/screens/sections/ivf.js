@@ -3,24 +3,23 @@ let lastYPos = 0;
 let direction = ``;
 
 export default () => {
-
   window.addEventListener(`scroll`, onScroll);
-
 };
 
 const onScroll = () => {
 
+  const winY = window.scrollY;
+
+  if (winY > lastYPos) {
+    direction = `forward`;
+  } else {
+    direction = `backward`;
+  }
+
+  console.log(`direction:`, direction);
+
   steps.forEach(step => {
     const yStep = step.getBoundingClientRect().y;
-    if (yStep > lastYPos) {
-      direction = `forward`;
-    } else {
-      direction = `backward`;
-    }
-
-    console.log(`direction:`, direction);
-
-    //reset
     step.classList.remove(`sticky`);
 
     //Stick
@@ -28,7 +27,7 @@ const onScroll = () => {
       step.classList.add(`sticky`);
       step.classList.add(`step-show`);
     }
-
-    lastYPos = yStep;
   });
+
+  lastYPos = winY;
 };
