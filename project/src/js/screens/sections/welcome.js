@@ -25,7 +25,9 @@ const btnClicked = e => {
 };
 
 const goFurtherHandler = e => {
-  $video.srcObject.getTracks()[0].stop();
+  if ($video && $video.srcObject) {
+    $video.srcObject.getTracks()[0].stop();
+  }
   e.preventDefault();
   const btnUploadPhoto = document.querySelector(`.photo-upload`);
   const btnTakePhoto = document.querySelector(`.photo-take`);

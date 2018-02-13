@@ -10,8 +10,12 @@ let HEIGHT;
 export default s => {
   section = s;
   HEIGHT = window.innerHeight;
-  console.log(`HEIGHT:`, HEIGHT);
   wheelparts.forEach(p => p.addEventListener(`click`, wheelClicked));
+
+  console.log(`HEIGHT:`, HEIGHT);
+  console.log(`section:`, section);
+  // window.addEventListener(`scroll`, showWheel);
+
   draw();
 };
 
@@ -22,13 +26,17 @@ const wheelClicked = ({currentTarget: tar}) => {
   tar.classList.add(`wheel-part-active`);
 };
 
+// const showWheel = () => {
+//   const $wheelWrap = document.querySelector(`.wheel-wrap`);
+//
+//   const {y} = section.getBoundingClientRect();
+//
+//   if (y < HEIGHT * .2) {
+//     velocity($wheelWrap, {opacity: 1, translateY: `0%`}, {duration: 1700, easing: [300, 16]});
+//   }
+// };
+
 const draw = () => {
-
-  const {y} = section.getBoundingClientRect();
-
-  if (y < HEIGHT * .2) {
-    console.log(`k`);
-  }
 
   if (pos === `right-top`) {
     angle = 360;

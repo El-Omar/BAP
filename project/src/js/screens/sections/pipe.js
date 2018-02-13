@@ -2,8 +2,15 @@
 
 // import * as d3 from 'd3';
 
-export default () => {
+export default section => {
 
+  window.addEventListener(`scroll`, () => {
+    const {y} = section.getBoundingClientRect();
+    if (y <= 150) {
+      const $baby = document.querySelector(`.baby-container`);
+      $baby.classList.add(`hidden`);
+    }
+  });
   // console.log(`d3:`, d3);
   // const wrap = document.querySelector(`.pipe-sub-right`);
   // const svg = document.querySelector(`.pipe-right-svg`);
