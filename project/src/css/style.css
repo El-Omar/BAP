@@ -52,7 +52,7 @@ body {
   font-size: 1.6rem;
   font-family: calibri;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 /*--------------IVF SECTION------------------------*/
@@ -785,6 +785,7 @@ body {
 
 .aging-art {
   margin: 0 0 15rem 3rem;
+  opacity: .2;
 
   &-title {
     font-family: bloc;
@@ -944,6 +945,14 @@ body {
     margin-top: -1.5rem;
     margin-right: -1.3rem;
   }
+}
+
+.faded {
+  opacity: .2;
+}
+
+.clear {
+  opacity: 1;
 }
 
 .hidden {
