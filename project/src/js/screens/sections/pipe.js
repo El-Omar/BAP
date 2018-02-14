@@ -1,4 +1,4 @@
-/* eslint-disable */
+// import velocity from 'velocity-animate';
 
 // import * as d3 from 'd3';
 
@@ -9,6 +9,28 @@ export default section => {
     if (y <= 150) {
       const $baby = document.querySelector(`.baby-container`);
       $baby.classList.add(`hidden`);
+    }
+
+    const $glass = document.querySelector(`.pipe-glass-right`);
+    const yGlass = $glass.getBoundingClientRect().y;
+
+    if (yGlass <= window.innerHeight * .5) {
+      const $babyHalfs = document.querySelectorAll(`.baby-half`);
+
+      $babyHalfs.forEach(h => {
+
+        h.classList.add(`baby-half-done`);
+
+        // velocity(h, {
+        //   // translateY: `0%`,
+        //   top: `0`,
+        //   opacity: 1
+        // }, {
+        //   duration: 1200,
+        //   easing: [300, 100]
+        // });
+
+      }); //forEach
     }
   });
   // console.log(`d3:`, d3);

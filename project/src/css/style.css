@@ -52,6 +52,10 @@ body {
   font-size: 1.6rem;
   font-family: calibri;
   overflow-x: hidden;
+
+  & p {
+    line-height: 2.6rem;
+  }
   /* overflow-y: hidden; */
 }
 
@@ -105,9 +109,28 @@ body {
 
 .left-side {
   order: 1;
+  position: relative;
+  height: 100%;
 
   & .hand-pic {
+    margin-top: 30%;
     width: 100%;
+    z-index: 5;
+  }
+
+  &-ovum {
+    z-index: -1;
+    opacity: .9;
+    margin-right: 14.5rem;
+  }
+
+  &-ovum-wrap {
+    width: 100%;
+    height: 4rem;
+    position: sticky;
+    top: 35%;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -518,6 +541,8 @@ body {
   &-glass {
 
     &-right {
+      position: relative;
+      overflow: hidden;
       align-self: flex-end;
       margin-right: -5rem;
       display: flex;
@@ -530,6 +555,8 @@ body {
     }
 
     &-left {
+      position: relative;
+      overflow: hidden;
       align-self: flex-start;
       margin-left: -5rem;
       display: flex;
@@ -551,14 +578,22 @@ body {
   }
 }
 
-.ovum, .sperm {
+.baby-half {
   position: absolute;
+  top: -7rem;
+  opacity: .2;
+  transition: all 5s ease-in-out;
+
+  &-done {
+    top: 100%;
+    opacity: 1;
+  }
 }
 
 .fertility {
   position: relative;
   height: 100vh;
-  padding: 3rem;
+  padding: 6rem 3rem;
   margin-top: -10rem;
 
   &::before {
@@ -623,8 +658,8 @@ body {
     content: '';
     position: absolute;
     width: 1.3rem;
-    height: 10rem;
-    background: var(--revolver);
+    height: 61.4vh;
+    background: linear-gradient(to bottom, var(--revolver) 50%, color(var(--watermelon) a(70%)) 50%);
     left: calc(50% - .6rem);
     top: 13rem;
   }
@@ -764,7 +799,6 @@ body {
   }
 
   &-pipe {
-    /*@apply --watermelon-gradient;*/
     height: 100%;
     width: 35rem;
     position: absolute;
@@ -774,11 +808,12 @@ body {
 
   &-pipeUp {
     background: url(../assets/img/2x/pipe_2@2x.png) no-repeat;
-    height: 157rem;
+    height: 160rem;
     width: 44rem;
     position: absolute;
-    right: 11rem;
-    top: -17.9rem;
+    right: 10.8rem;
+    top: -18rem;
+    bottom: -10rem;
     z-index: 5;
   }
 }
@@ -815,12 +850,16 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+  width: 100%;
+  height: 100;
 
   &-container {
+    opacity: 0;
     position: sticky;
     width: 20rem;
     height: 20rem;
     top: 20%;
+    transform: scale(.15);
   }
 
   &-wrap {
@@ -829,12 +868,13 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 50%;
   }
 }
 
 .freeze {
-  height: 90vh;
-  padding: 5rem 3rem;
+  padding: 5rem 4rem;
+  position: relative;
 
   &-title {
     font-family: bloc;
@@ -855,25 +895,58 @@ body {
 
   &-desc {
     font-size: 2rem;
-    width: 50rem;
+    width: 46rem;
     margin-bottom: 2rem;
     line-height: 2.3rem;
+    color: var(--pompadour);
 
     &-keyword {
       color: var(--emerald);
       font-weight: bold;
     }
   }
+
+  &-2 {
+    margin: 10rem 0;
+  }
+}
+
+.fridge {
+  z-index: 5;
+
+  &-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 52%;
+    height: 100%;
+  }
+
+  &-ovum {
+    /* z-index: -1; */
+    opacity: .7;
+    margin-right: 16rem;
+  }
+
+  &-ovum-wrap {
+    z-index: -1;
+    width: 100%;
+    height: 4rem;
+    position: sticky;
+    top: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 .outro {
   width: 100%;
-  height: 100vh;
+  height: 150vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  z-index: -2;
+  z-index: 5;
   position: relative;
 
   &::before {
@@ -882,7 +955,16 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -2;
+    z-index: 5;
+  }
+
+  &-pipes {
+    z-index: 5;
+    width: 67%;
+    height: calc(100% + 3rem);
+    position: absolute;
+    right: 0;
+    top: -2.5rem;
   }
 }
 
@@ -890,11 +972,21 @@ body {
   @apply --bg-gradient;
   height: 100vh;
   width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
+  /* flex-flow: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
   margin: 0;
+  position: relative;
+  overflow: hidden;
+
+  &-woman {
+    z-index: 5;
+    top: 10rem;
+    /* left: -2.5rem; */
+    /* left: 50%; */
+    transform: rotate(180deg);
+  }
 
   &-header {
     margin-top: -5%;

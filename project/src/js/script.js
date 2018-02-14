@@ -2,10 +2,6 @@ import screens from './screens/index';
 let $chapters;
 
 const init = () => {
-  // window.location.href = `#start`;
-  // window.location.replace(`index.html#start`);
-  // window.location.reload();
-  console.log(`window.location:`, window.location);
   preload();
   create();
 };
