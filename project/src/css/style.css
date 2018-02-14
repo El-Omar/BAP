@@ -818,6 +818,13 @@ body {
   }
 }
 
+.PipeEIcel {
+  display: flex;
+  position: absolute;
+  left: 30rem;
+  top: 136.5rem;
+}
+
 .aging-art {
   margin: 0 0 15rem 3rem;
   opacity: .2;
