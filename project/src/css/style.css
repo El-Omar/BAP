@@ -970,7 +970,7 @@ body {
 
 .ending {
   @apply --bg-gradient;
-  height: 100vh;
+  height: auto;
   width: 100%;
   /* display: flex; */
   /* flex-flow: column; */
@@ -1005,7 +1005,7 @@ body {
 
   &-are {
     font-family: pacifico;
-    font-size: 11.5rem;
+    font-size: 9.5rem;
     color: var(--pompadour);
     text-shadow: .4rem 0 var(--shadow);
     margin-bottom: .3rem;
@@ -1015,7 +1015,7 @@ body {
   &-youan {
     font-family: calibri;
     font-weight: bold;
-    font-size: 6.4rem;
+    font-size: 4.4rem;
     color: var(--apricot);
     text-shadow: .3rem 0 var(--shadow);
     margin-left: -.5rem;
@@ -1023,7 +1023,7 @@ body {
 
   &-educated {
     font-family: bloc;
-    font-size: 9rem;
+    font-size: 7rem;
     color: var(--pompadour);
     text-shadow: .2rem 0 var(--shadow);
     margin-top: -.5rem;
@@ -1031,11 +1031,32 @@ body {
 
   &-baby {
     font-family: bloc;
-    font-size: 16rem;
+    font-size: 14rem;
     color: var(--apricot);
     text-shadow: .8rem 0 var(--shadow);
     margin-top: -1.5rem;
     margin-right: -1.3rem;
+  }
+
+}
+
+.palmSection {
+  width: 100%;
+  margin-top: 15rem;
+  background: url(../assets/img/1x/ending-fire-full.png) no-repeat;
+  background-size: cover;
+
+  & .palm-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5rem;
+
+    .graduated-sign {
+      display: flex;
+      justify-content: center;
+    }
+
   }
 }
 
