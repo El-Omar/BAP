@@ -114,14 +114,14 @@ const draw = () => {
   const $bg = document.querySelector(`.wheel-wrap-bg`);
   $bg.style.background = `linear-gradient(${currAngle}deg, #582b42 85%, #ff406a 15%)`;
 
-  const $imgWrap = document.querySelector(`.fertility-img-wrap`);
-  $imgWrap.style.transform = `rotate(${currAngle}deg)`;
+  // const $imgWrap = document.querySelector(`.fertility-img-wrap`);
+  // $imgWrap.style.transform = `rotate(${currAngle}deg)`;
 
-  const $imgCont = document.querySelector(`.fertility-img-container`);
-  $imgCont.style.transform = `rotate(${currAngle + rotateOffset}deg)`;
+  // const $imgCont = document.querySelector(`.fertility-img-container`);
+  // $imgCont.style.transform = `rotate(${currAngle + rotateOffset}deg)`;
   // $imgCont.style.transform = `rotate(${currAngle}deg)`;
   //
-  currImage.style.transform = `rotate(${imgRotateOffset}deg)`;
+  // currImage.style.transform = `rotate(${imgRotateOffset}deg)`;
 
   requestAnimationFrame(draw);
 };

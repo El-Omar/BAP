@@ -90,7 +90,7 @@ body {
   align-items: center;
   transform: translateX(100%);
   opacity: 0;
-  transition: all 80ms ease-out;
+  transition: all 500ms ease-in-out;
   padding-top: 2rem;
 
   &-show {
@@ -300,6 +300,19 @@ body {
   z-index: 15;
 }
 
+.baby-hat {
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 130px;
+    height: 114px;
+    background: url(../assets/img/1x/baby-hat.png) no-repeat;
+    top: -4.7rem;
+    left: -2.8rem;
+  }
+}
+
 .baby {
   width: 100%;
   height: 100%;
@@ -307,9 +320,14 @@ body {
   &-container {
     z-index: 1;
     position: absolute;
-    transition-duration: 80ms;
     width: 85px;
     height: 190px;
+    transition: all 1s ease-in-out;
+    transform: rotate(0deg);
+
+    &-done {
+      transform: rotate(180deg);
+    }
   }
 
   &-wrap {
@@ -405,7 +423,7 @@ body {
   clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
   width: 100%;
   height: 150vh;
-  margin-top: -15%;
+  margin-top: -18%;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -639,36 +657,19 @@ body {
 
 .fertility-img {
   position: absolute;
-  /* width: 50%; */
-  height: 50%;
-  transform: rotate(-45deg);
+  width: 78%;
 
   &-left-top {
-    width: 40%;
-    left: 0;
-    top: 0;
-  }
-
-  &-left-bottom {
-    left: 0;
-    bottom: 0;
-  }
-
-  &-right-top {
-    right: 0;
-    top: 0;
-  }
-
-  &-right-bottom {
-    right: 0;
-    bottom: 0;
+    width: 62%;
   }
 
   &-container {
     position: relative;
     width: 100%;
     height: 100%;
-    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 
   &-wrap {
@@ -676,7 +677,6 @@ body {
     height: 50rem;
     position: absolute;
     bottom: 0;
-    margin-bottom: -30rem;
   }
 }
 
@@ -849,6 +849,13 @@ body {
   }
 }
 
+.PipeEIcel {
+  display: flex;
+  position: absolute;
+  left: 30rem;
+  top: 136.5rem;
+}
+
 .aging-art {
   margin: 0 0 15rem 3rem;
   opacity: .2;
@@ -1001,7 +1008,7 @@ body {
 
 .ending {
   @apply --bg-gradient;
-  height: auto;
+  height: 100vh;
   width: 100%;
   /* display: flex; */
   /* flex-flow: column; */
@@ -1013,7 +1020,7 @@ body {
 
   &-woman {
     z-index: 5;
-    top: 10rem;
+    top: 5rem;
     /* left: -2.5rem; */
     /* left: 50%; */
     transform: rotate(180deg);
@@ -1032,6 +1039,10 @@ body {
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    &-wrap {
+      margin-top: -1rem;
+    }
   }
 
   &-are {
@@ -1073,9 +1084,6 @@ body {
 
 .palmSection {
   width: 100%;
-  margin-top: 15rem;
-  background: url(../assets/img/1x/ending-fire-full.png) no-repeat;
-  background-size: cover;
 
   & .palm-place {
     display: flex;
@@ -1088,6 +1096,39 @@ body {
       justify-content: center;
     }
 
+  }
+}
+
+.ending-bg {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  background: url(../assets/img/1x/ending-fire-full.png) no-repeat;
+  background-size: cover;
+}
+
+.share {
+
+  &-wrap {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  &-btn {
+    @apply --button;
+    width: 15rem;
+    height: 7rem;
+    background: var(--apricot);
+    color: inherit;
+    margin-left: 35rem;
+    margin-top: 15rem;
   }
 }
 
